@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="reg">
+        <div class="pagewrap">
+            <form class="form" id="form" action="/registration">
+              <div style="display: flex; align-items: center; justify-content: center;gap: 40px; margin-left: 130px;" class="log">
+                <h3 class="form__title" id="h3">Login</h3>
+                <button class="form__submit" id="signUp" type="button" value="submit" style="width: 100px; height: 40px; font-size: 14px; margin-top: -15px; ">Sign up</button>
+              </div>
+              <div class="container">
+                <input class="login" type="login" id="login" name="email"  value="" required>
+                <label id="userLabel" for="login" class="container__label">Login</label>
+              </div>
+              <div class="container">
+                <input class="login" type="password" id="pass" name="password" value="" required>
+                <label id="passLabel" for="pass" class="container__label">Password</label>
+              </div>
+              <button class="form__submit" id="submit" type="submit" value="submit">Submit</button>
+            </form>
+          </div>
+
+          <script src="./login.js"></script>
+</body>
+</html>

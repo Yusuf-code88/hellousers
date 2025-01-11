@@ -1,0 +1,364 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.nav {
+  margin-top: 40px;
+}
+
+.nav {
+  display: flex;
+  justify-content: end;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: green;
+  color: white;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: green;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.reg_box {
+  display: none;
+}
+
+.reg-box {
+  height: 100vh;
+  background-color: black;
+  position: absolute;
+  top: -1000px;
+  width: 100%;
+}
+
+.reg {
+  height: 100vh;
+  background-color: #88D0E6;
+  margin-top: 1000px;
+  width: 100%;
+  z-index: 2;
+}
+
+.main_box {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.boxes {
+  border: 3px solid rgb(221, 12, 12);
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  gap: 8px;
+  border-radius: 10px;
+}
+
+.boxes img {
+  border-radius: 10px;
+}
+
+.arrow-box {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  transition: all 0.3s ease;
+  animation-delay: 0s;
+}
+
+/* body {
+  background: #74ebd5;
+  background: -webkit-linear-gradient(to bottom, #74ebd5, #acb6e5);
+  background: linear-gradient(to bottom, #74ebd5, #acb6e5);
+  font-size: 16px;
+  line-height: 1.2;
+  color: #888;
+} */
+.pagewrap {
+  max-width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  width: 90%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+  background-color: #ecedee;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  .form {
+    max-width: 380px;
+  }
+}
+@media (min-width: 980px) and (max-width: 1400px) {
+  .form {
+    width: 35%;
+  }
+}
+.form__title {
+  margin-bottom: 1em;
+  position: relative;
+  z-index: 2;
+  background: transparent;
+  text-transform: uppercase;
+}
+
+.form__submit {
+  margin-top: 1.2em;
+  border: none;
+  padding: 0.9em;
+  background-color: skyblue;
+  color: #fff;
+  letter-spacing: 1.2px;
+  font-size: 0.98rem;
+  text-transform: uppercase;
+  box-shadow: -3px 5px rgba(0, 191, 255, 0.9);
+  cursor: pointer;
+  transition: all 0s ease;
+}
+
+.form__submit.clicked {
+  position: relative;
+  top: 10px;
+  left: -3px;
+  box-shadow: 0px 0px;
+}
+
+.container {
+  position: relative;
+  width: 90%;
+  height: 15%;
+  margin-top: 1em;
+}
+
+.container__input {
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  border: 3px solid #fff;
+  background-color: transparent;
+  color: #666;
+  font-weight: bold;
+}
+
+.container__input:first-of-type {
+  margin-bottom: 1em;
+}
+
+.container__input:focus + .container__label,
+.container__input:valid + .container__label {
+  top: -8px;
+  left: 3px;
+  width: 30%;
+  height: 10%;
+  padding: 0.8em 3.5em;
+}
+
+.container__label {
+  position: absolute;
+  top: -8px;
+  left: 3px;
+  width: 30%;
+  height: 10%;
+  padding: 0.8em 3.5em;
+  background-color: skyblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 500px) {
+  .container__label {
+    top: 3px;
+    left: 3px;
+    height: 86%;
+    padding: 0;
+  }
+}
+body {
+  font-family: "Roboto", serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.button:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(0, 142.8, 178.5);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.button:hover {
+  color: #fff;
+}
+.button:hover:before {
+  width: 100%;
+  right: 0;
+}
+
+.button2 {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border: none;
+}
+.button2:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0cf;
+  border-radius: 10rem;
+  z-index: -2;
+}
+.button2:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: rgb(0, 142.8, 178.5);
+  transition: all 0.3s;
+  border-radius: 10rem;
+  z-index: -1;
+}
+.button2:hover {
+  color: #fff;
+}
+.button2:hover:before {
+  width: 100%;
+}
+
+/*# sourceMappingURL=main.css.map */
