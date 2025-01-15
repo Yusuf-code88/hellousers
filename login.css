@@ -132,3 +132,12 @@
 .error-input {
   border: 2px solid red;
 }
+
+.p {
+  color: red;
+  text-align: start;
+  font-weight: 300;
+  position: relative;
+  top: 10px;
+  right: 75px;
+}

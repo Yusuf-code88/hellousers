@@ -7,30 +7,25 @@ const form = document.querySelector('form')
 const submit = document.querySelector("#submit")
 const reg = document.querySelector(".reg")
 
-// Функция для проверки наличия токена в куки
-function checkAuthentication() {
-  // Получаем все куки в виде строки
-  const cookies = document.cookie;
-
-  // Ищем токен среди куки
-  const token = cookies
-    .split('; ')
-    .find(row => row.startsWith('authToken='))
-    ?.split('=')[1];
-
-  // Если токена нет, перенаправляем на login.html
-  if (!token) {
-    window.location.href = 'login.html';
-  }
-}
-
-// Вызываем функцию при загрузке страницы
-checkAuthentication();
-
+checkToken()
 
 creteBtn.addEventListener('click', () => {
     reg_box.classList.toggle('reg');
   });
+
+function checkToken() {
+  let token = document.cookie
+  token = token.slice(0, 5)
+
+  const mainUrl = window.location.href
+
+  if(token !== "token"){
+    window.location.assign(mainUrl + 'login.html')
+    return
+  }
+
+  return
+}  
 
 async function makeRequest (url, method, data = null) {
   const options = {
